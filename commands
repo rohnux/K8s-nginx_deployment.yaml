@@ -1,0 +1,51 @@
+1. kubectl apply -f nginx_configmap.yaml
+
+2. kubectl apply -f nginx_deployment.yaml
+
+3. kubectl apply -f nginx_service.yaml
+
+4. kubectl get pods 
+
+5. Kubectl get sac
+
+6. Kubetcl describe cm nginx_conf
+ 
+7. kubectl exec -it <pod-name> -- bin/bash
+
+8. curl <node-ip>:30001 - Authorization error
+
+<html>
+<head><title>401 Authorization Required</title></head>
+<body>
+<center><h1>401 Authorization Required</h1></center>
+<hr><center>nginx/1.19.2</center>
+</body>
+</html>
+
+9. curl -u <username>:<password> 192.168.99.102:30001
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
