@@ -1,18 +1,22 @@
-1. kubectl apply -f nginx_configmap.yaml
+1. htpasswd -c .htpasswd demo demo1234  - used for generating the htpassword in file .htpassword 
 
-2. kubectl apply -f nginx_deployment.yaml
+2. kubectl create secret generic nginx-htpasswd --from-file .htpasswd   - used for creating the secret in  k8s 
 
-3. kubectl apply -f nginx_service.yaml
+3. kubectl apply -f nginx_configmap.yaml
 
-4. kubectl get pods 
+3. kubectl apply -f nginx_deployment.yaml
 
-5. Kubectl get sac
+5. kubectl apply -f nginx_service.yaml
 
-6. Kubetcl describe cm nginx_conf
+6. kubectl get pods 
+
+7. Kubectl get sac
+
+8. Kubetcl describe cm nginx_conf
  
-7. kubectl exec -it <pod-name> -- bin/bash
+9. kubectl exec -it <pod-name> -- bin/bash
 
-8. curl <node-ip>:30001 - Authorization error
+10. curl <node-ip>:30001 - Authorization error
 
 <html>
 <head><title>401 Authorization Required</title></head>
@@ -22,7 +26,7 @@
 </body>
 </html>
 
-9. curl -u <username>:<password> 192.168.99.102:30001
+11. curl -u <username>:<password> 192.168.99.102:30001
 
 <!DOCTYPE html>
 <html>
