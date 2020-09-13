@@ -4,7 +4,7 @@
 
 3. kubectl apply -f nginx_configmap.yaml
 
-3. kubectl apply -f nginx_deployment.yaml
+4. kubectl apply -f nginx_deployment.yaml
 
 5. kubectl apply -f nginx_service.yaml
 
